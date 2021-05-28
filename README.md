@@ -1,3 +1,11 @@
+### Project Web Here
+
+    Projeto em estado de desenvolvimento feito Brinfing com Pixlr e desenvolvido com React. 
+    Para inicializar o projeto através do terminal utilizar o comando: npm i.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
