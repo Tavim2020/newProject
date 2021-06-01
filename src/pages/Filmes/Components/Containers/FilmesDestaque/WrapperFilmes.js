@@ -11,6 +11,7 @@ const WrapperFilmes = () => {
         <div className='Wrapper'>
 
 
+
             {normalLeft && <img className='First' id={Destaque[6].id} onClick={newLoadLeft} src={Destaque[6].capa} alt={Destaque[6].title} />}
 
             {retroLeft && <img className='First' id={Destaque[3].id} onClick={resetFilmesTwo} src={Destaque[3].capa} alt={Destaque[3].title} />}
