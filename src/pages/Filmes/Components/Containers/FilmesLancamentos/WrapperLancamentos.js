@@ -7,7 +7,7 @@ const WrapperLancamentos = () => {
         divLancamentosFilmes  } = React.useContext(GlobalContextFilmes);
 
     return (
-        <div className='Wrapper' ref={divLancamentosFilmes} onFocus={moveFilmeAuto}>
+        <div className='Wrapper' ref={divLancamentosFilmes}>
 
             <img className='First' 
                 onMouseMove={moveFilmeAuto} 
@@ -22,7 +22,6 @@ const WrapperLancamentos = () => {
 
                         <img  id={filmes.id} 
                             onMouseMove={moveFilmeAuto} 
-                            className='LancamentosFilmes' 
                             onClick={moveMancheteTwo} 
                             src={filmes.capa} 
                             alt={filmes.title}

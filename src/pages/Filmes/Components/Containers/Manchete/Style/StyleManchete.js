@@ -13,6 +13,8 @@ export const MancheteContainer = styled.section`
     display: flex;
     flex-direction: column;
 
+    
+
     .Background-Image{
         width: 100vw;
         height: 100%;
@@ -21,6 +23,7 @@ export const MancheteContainer = styled.section`
         top:0;
         filter: brightness(0.7);
         z-index: -1;
+        image-rendering: pixelated;
     }
 
     .Header{
@@ -92,6 +95,7 @@ export const MancheteContainer = styled.section`
                 width: 29.5vw;
                 height: 100%;
                 object-fit: cover;
+                image-rendering: pixelated;
             }
         }
     }

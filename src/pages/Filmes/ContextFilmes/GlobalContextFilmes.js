@@ -1,6 +1,9 @@
 import React from 'react';
 import Destaque from '../../../Data/destaque';
 import Lancamentos from '../../../Data/lancamentos';
+import Acao from '../../../Data/acao';
+
+
 
 
 
@@ -25,8 +28,6 @@ export const GlobalStorageFilmes = ({children}) =>{
 
 
     const arrayLancamentos = Lancamentos.slice(1, 15);
-
-
 
 
     function moveManchete(event){  
@@ -252,6 +253,180 @@ export const GlobalStorageFilmes = ({children}) =>{
     }
 
 
+    // Acao - Estados e funções
+    const [firstFilme, setFirstFilme] = React.useState(false);
+    const [UltimoFilme, setUltimoFilme] = React.useState(false);
+    const arrayFilmes = Acao.slice(1, 9);
+    const lastFilme = [];
+    const [state, setState] = React.useState(false);
+    const [state1, setState1] = React.useState(false);
+    const [state2, setState2] = React.useState(false);
+    const [state3, setState3] = React.useState(false);
+    const [state4, setState4] = React.useState(false);
+    const [state5, setState5] = React.useState(false);
+    const [state6, setState6] = React.useState(false);
+    const [state7, setState7] = React.useState(false);
+    const [state8, setState8] = React.useState(false);
+
+
+
+
+    lastFilme[1] = state;
+    lastFilme[2] = state1;
+    lastFilme[3] = state2;
+    lastFilme[4] = state3;
+    lastFilme[5] = state4;
+    lastFilme[6] = state5;
+    lastFilme[7] = state6;
+    lastFilme[8] = state7;
+    lastFilme[9] = state8;
+
+    function moreState(event){
+        setFirstFilme(false);
+        setUltimoFilme(false);
+
+       if(Number(event.target.id) === 1){
+            setState(true); 
+
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+            setState8(false);
+       }
+       if(Number(event.target.id) === 2){
+            setState1(true); 
+
+            setState(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+            setState8(false);
+        }
+        if(Number(event.target.id) === 3){
+            setState2(true);
+
+            setState(false);
+            setState1(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+            setState8(false); 
+       }
+       if(Number(event.target.id) === 4){
+            setState3(true); 
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+            setState8(false);
+        }
+        if(Number(event.target.id) === 5){
+            setState4(true); 
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+            setState8(false);
+       }
+       if(Number(event.target.id) === 6){
+            setState5(true);
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState6(false);
+            setState7(false);
+            setState8(false); 
+        }
+        if(Number(event.target.id) === 7){
+            setState6(true); 
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState7(false);
+            setState8(false);
+       }
+       if(Number(event.target.id) === 8){
+            setState7(true); 
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState8(false);
+        }
+        if(Number(event.target.id) === 9){
+            setState8(true); 
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+        }
+
+    }
+
+
+    function moveState(){
+        setState(false);
+        setState1(false);
+        setState2(false);
+        setState3(false);
+        setState4(false);
+        setState5(false);
+        setState6(false);
+        setState7(false);
+        setState8(false);
+        setUltimoFilme(false);
+
+        setFirstFilme(true);
+    }
+
+    function moveUltimoState(){
+        setFirstFilme(false);
+        setState(false);
+        setState1(false);
+        setState2(false);
+        setState3(false);
+        setState4(false);
+        setState5(false);
+        setState6(false);
+        setState7(false);
+        setState8(false);
+
+        setUltimoFilme(true);
+    }
+   
 
     return(
     <GlobalContextFilmes.Provider value={{
@@ -262,6 +437,9 @@ export const GlobalStorageFilmes = ({children}) =>{
         newLoadRight,
         resetFilmesTwo,
         moveFilmeAuto,
+        moveState,
+        moreState,
+        moveUltimoState,
         retroLeft,
         normalRight,
         retroRight,
@@ -275,6 +453,11 @@ export const GlobalStorageFilmes = ({children}) =>{
         capa,
         description,
         divLancamentosFilmes,
+        Acao,
+        firstFilme,
+        arrayFilmes,
+        lastFilme,
+        UltimoFilme,
     }}>
         {children}
     </GlobalContextFilmes.Provider>
