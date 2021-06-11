@@ -7,6 +7,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoSemPerdao.jpg',
             trailer: 'UGogP94TkC4',
             stars: 4,
+            link: 'https://cineplayfilmes.com/filme/sem-perdao-2/',
         },
         {
             id: 1,
@@ -15,6 +16,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoBabyDrive.png',
             trailer: 'S25X-gFxX9s',
             stars: 3.5,
+            link: 'https://cineplayfilmes.com/filme/em-ritmo-de-fuga/',
         },
         {
             id: 2,
@@ -23,14 +25,16 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoMestreZ.jpg',
             trailer: '-wV2vjz9M28',
             stars: 3.5,
+            link: 'https://megafilmeshdd.com/filmes/mestre-z-o-legado-de-ip-man/',
         },
         {
             id: 3,
-            title: 'Operação Fronteira ',
+            title: 'Operação Fronteira',
             description: 'Tom Davis (Ben Affleck), Santiago Garcia (Oscar Isaac), Francisco Morales (Pedro Pascal), William Miller (Charlie Hunnam) e Ben Miller (Garrett Hedlund) são cinco ex-soldados das Forças Especiais dos Estados Unidos que decidem se reunir para executar um plano arriscado: roubar um poderoso senhor do crime na fronteria que separa o Brasil da Colômbia e do Peru. No entanto, quando o esquema dá errado, os antigos companheiros de batalha se verão forçados a embarcar em uma épica luta por suas vidas.',
             capa: 'imagens/filmes/acao/capaAcaoOperacaoFronteira.jpg',
             trailer: 'CMTE62DL37Q',
             stars: 3,
+            link: 'https://maxfilmes.tv/filmes/assistir-filme-operacao-fronteira-online/',
         },
         {
             id: 4,
@@ -39,6 +43,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoResgate.jpg',
             trailer: 'GMKKq_bYd0E',
             stars: 3.5,
+            link: 'https://assistirfilmesseries.com/resgate/',
         },
         {
             id: 5,
@@ -47,6 +52,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoMosul.jpg',
             trailer: 'bLPCeWrLZ2k',
             stars: 3.5,
+            link: 'https://cineplayfilmes.com/filme/mosul/',
         },
         {
             id: 6,
@@ -55,6 +61,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoTheOldGuard.jpg',
             trailer: 'x4_EAlRLY_E',
             stars: 2,
+            link: 'https://superfilmes.online/the-old-guard/',
         },
         {
             id: 7,
@@ -63,6 +70,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoOsUltimosCavaleiros.jpg',
             trailer: 'vaFRY6Tji1g',
             stars: 4,
+            link: 'https://megafilmeshdd.com/filmes/os-ultimos-cavaleiros/',
         },
         {
             id: 8,
@@ -71,6 +79,7 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoFugaAMeiaNoite.jpg',
             trailer: 'pmohj5q9ug4',
             stars: 3,
+            link: 'https://mocho.tv/movies/tt0095631',
         },
         {
             id: 9,
@@ -79,5 +88,6 @@ module.exports =
             capa: 'imagens/filmes/acao/capaAcaoMadMax.jpg',
             trailer: 'QpsLW5EdAdA',
             stars: 4.5,
+            link: 'https://assistirfilmesseries.com/mad-max/',
         },
     ]

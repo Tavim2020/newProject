@@ -100,37 +100,45 @@ export const MancheteContainer = styled.section`
         }
     }
 
-
-    .Stars{
+    .FooterManchete{
         margin: 0 auto;
-        width: 20%;
-        height: 5vw;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
+        width: 65%;
         display: flex;
         align-items: center;
 
-        .Star{
-            width: 2vw;
-            height: 2vw;;
-        }
+        .Stars{
+            margin: 0 auto;
+            width: 20%;
+            height: 5vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+            margin-left: 20vw;
+            display: flex;
+            align-items: center;
 
-        img:nth-child(1),
-        img:nth-child(2),
-        img:nth-child(3),
-        img:nth-child(4){
-            margin-right: 0.7vw;
-        }
-        
-        .Half{
-            width: 1vw;
-            overflow-x: hidden;
-
-            img{
+            .Star{
                 width: 2vw;
                 height: 2vw;;
             }
+
+            img:nth-child(1),
+            img:nth-child(2),
+            img:nth-child(3),
+            img:nth-child(4){
+                margin-right: 0.7vw;
+            }
+            
+            .Half{
+                width: 1vw;
+                overflow-x: hidden;
+
+                img{
+                    width: 2vw;
+                    height: 2vw;;
+                }
+            }
         }
+
     }
     
 

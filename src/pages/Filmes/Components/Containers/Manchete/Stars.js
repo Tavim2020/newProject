@@ -1,30 +1,43 @@
 import React from 'react';
 import { GlobalContextFilmes } from '../../../ContextFilmes/GlobalContextFilmes'
+import ButtonPlay from '../../Buttons/ButtonPlay';
 
 const Stars = () => {
 
-    const { FatherStar } = React.useContext(GlobalContextFilmes);
+    const { FatherStar, srcManchete, titlePlay} = React.useContext(GlobalContextFilmes);
 
 
     return (
-        <div className='Stars' ref={FatherStar}>
+        <div className='FooterManchete'>
 
-            <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
 
-            <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+            <ButtonPlay src={srcManchete} width='40%' id='ManchetePlay'>
 
-            <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+                Play Filme: {titlePlay}
 
-            <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+            </ButtonPlay>
 
-        
-                
-            <div className='Half'>  
 
-                <img id='Star' src='imagens/filmes/destaque/estrela.png' alt='estrelas' />
+            <div className='Stars' ref={FatherStar}>
 
+                <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+
+                <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+
+                <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+
+                <img className='Star' src='imagens/filmes/destaque/estrela.png' alt='Star' />
+
+            
+                    
+                <div className='Half'>  
+
+                    <img id='Star' src='imagens/filmes/destaque/estrela.png' alt='estrelas' />
+
+                </div>
+                    
             </div>
-                
+
         </div>
     )
 }

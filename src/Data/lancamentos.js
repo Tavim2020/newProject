@@ -7,6 +7,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaLegadoExplosivo.jpeg',
             background: 'imagens/filmes/lancamentos/legadoExplosivo.jpg',
             stars: 2.5,
+            link: 'https://megafilmeshdd.com/filmes/legado-explosivo/'
         },
         {
             id: 1,
@@ -15,6 +16,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaSkinAFlorDaPele.jpeg',
             background: 'imagens/filmes/lancamentos/skinAFlorDaPele.jpg',
             stars: 3.5,
+            link: 'https://www.filmesonlinegratisbr.com/skin-legendado-online/',
         },
         {
             id: 2,
@@ -23,6 +25,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaUmTioQuasePerfeito2.jpeg',
             background: 'imagens/filmes/lancamentos/umTioQuasePerfeito2.jpg',
             stars: 3,
+            link: 'https://megafilmeshdd.com/filmes/um-tio-quase-perfeito-2/',
         },
         {
             id: 3,
@@ -31,6 +34,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaAViuvaDasSombras.jpg',
             background: 'imagens/filmes/lancamentos/aViuvaDasSombras.jpg',
             stars: 2.5,
+            link: 'https://megafilmeshdd.com/filmes/a-viuva-das-sombras/',
         },
         {
             id: 4,
@@ -39,6 +43,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaRayaEOUltimoDragao.jpg',
             background: 'imagens/filmes/lancamentos/rayaEOUltimoDragao.jpg',
             stars: 4,
+            link: 'https://megafilmeshdd.com/filmes/raya-e-o-ultimo-dragao/',
         },
         {
             id: 5,
@@ -47,6 +52,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaMaesDeVerdade.jpg',
             background: 'imagens/filmes/lancamentos/maesDeVerdade.png',
             stars: 2.5,
+            link: 'https://maxfilmes.tv/filmes/assistir-filme-maes-de-verdade-online/',
         },
         {
             id: 6,
@@ -55,14 +61,16 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaMortalKombat.png',
             background: 'imagens/filmes/lancamentos/mortalKombat.jpg',
             stars: 3,
+            link: 'https://megafilmeshdd.com/filmes/0002-mortal-kombat/',
         },
         {
             id: 7,
-            title: 'Stardust',
-            description: 'Startdust relata, com uma visão intimista, momentos do processo de inspiração para a criação do inesquecível alter ego de David Bowie, Ziggy Stardust. Em 1971, um jovem Bowie (Johnny Flynn) viaja para os Estados Unidos para promover seu novo disco, The Man Who Sold the World. Deixando Angie (Jena Malone), sua esposa grávida, para trás, Bowie embarca com sua banda em uma turnê com o lutador Rob Oberman (Marc Maron). Durante sua jornada, o astro sente a necessidade de se reiventar e inicia uma trajetória de autodescoberta, nascendo, assim, seu icônico alter-ego e um dos maiores ícones culturais do mundo, Ziggy Stardust.',
-            capa: 'imagens/filmes/lancamentos/capaStardust.jpg',
-            background: 'imagens/filmes/lancamentos/stardust.jpg',
-            stars: 3,
+            title: 'Malcolm & Marie',
+            description: 'Um cineasta chega em casa após a première de seu novo filme. Enquanto aguarda a liberação das críticas, ele e sua namorada se veem desenrolando os muitos problemas e segredos do seu relacionamento.',
+            capa: 'imagens/filmes/lancamentos/capaMalcolmEMarie.jpg',
+            background: 'imagens/filmes/lancamentos/malcolmEMarie.jpg',
+            stars: 4,
+            link: 'https://megafilmeshd50.com/filme/assistir-malcolm-e-marie-online-dublado-e-legendado-gratis-em-full-hd/'
         },
         {
             id: 8,
@@ -71,6 +79,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaGodzillaVsKong.jpg',
             background: 'imagens/filmes/lancamentos/godzillaVsKong.jpg',
             stars: 4,
+            link: 'https://cineplayfilmes.com/filme/godzilla-vs-kong/',
         },
         {
             id: 9,
@@ -79,6 +88,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaBlackbird.jpg',
             background: 'imagens/filmes/lancamentos/blackbird.jpeg',
             stars: 3,
+            link: 'https://megafilmeshdd.com/filmes/blackbird/',
         },
         {
             id: 10,
@@ -87,6 +97,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaBelaVinganca.jpg',
             background: 'imagens/filmes/lancamentos/belaVinganca.jpg',
             stars: 4,
+            link: 'https://megafilmeshdd.com/filmes/bela-vinganca/',
         },
         {
             id: 11,
@@ -95,6 +106,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaTheFather.jpg',
             background: 'imagens/filmes/lancamentos/theFather.jpg',
             stars: 4,
+            link: 'https://maxfilmes.tv/filmes/assistir-filme-the-father-online/',
         },
         {
             id: 12,
@@ -103,6 +115,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaMundoEmCaos.jpg',
             background: 'imagens/filmes/lancamentos/mundoEmCaos.png',
             stars: 2,
+            link: 'https://superfilmes.online/mundo-em-caos/',
         },
         {
             id: 13,
@@ -111,6 +124,7 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaTomEJerry.jpg',
             background: 'imagens/filmes/lancamentos/tomEJerry.jpg',
             stars: 3.5,
+            link: 'https://megafilmeshdd.com/filmes/0003-tom-jerry-o-filme/',
         },
         {
             id: 14,
@@ -119,5 +133,6 @@ module.exports =
             capa: 'imagens/filmes/lancamentos/capaDentePorDente.jpg',
             background: 'imagens/filmes/lancamentos/dentePorDente.jpg',
             stars: 2.5,
+            link: 'https://megafilmeshdd.com/filmes/dente-por-dente/',
         },
     ]

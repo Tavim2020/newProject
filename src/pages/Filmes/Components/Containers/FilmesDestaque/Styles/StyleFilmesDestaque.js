@@ -13,30 +13,13 @@ export const FilmesDestaqueContainer = styled.section`
     padding-top: 2vw;
     overflow: hidden;
 
-    .Title-Destaque{
-        width: 21vw;
-        height: 4vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        border-top-right-radius: 0.7vw;
-        border-bottom-right-radius: 0.7vw;
+        .Wrapper{
+            width: auto;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            align-items: center;
 
-        h3{
-            font-size: 3.5vw;
-            font-family: 'BebaNeue';
-            letter-spacing: 0.3vw;
-            padding-top: 0.4vw;
-        }
-    }
-
-    .Wrapper{
-        width: auto;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        align-items: center;
 
         img{
             cursor: pointer;
@@ -69,15 +52,14 @@ export const FilmesDestaqueContainer = styled.section`
 
         .Fourth{
             width: 18vw;
-            margin-right: 1.6vw; 
-            
+            margin-right: 1.6vw;      
         }
 
         .Fifth{
             width: 16vw;
             margin-right: 1.6vw; 
         }
-
+        
         .Sixth{
             width: 14vw;
             margin-right: 1.6vw; 
@@ -89,6 +71,23 @@ export const FilmesDestaqueContainer = styled.section`
             margin-right: 1.6vw; 
             
         }
+
+        .Hidden{
+            visibility: hidden;
+            pointer-events: none;
+            width: 12vw;
+            
+            margin-left: -6vw; 
+            margin-right: 1.6vw; 
+        }
+
+        .HiddenRight{
+            visibility: hidden;
+            pointer-events: none;
+            width: 12vw;
+            margin-right: 1.6vw;
+        }
+
     }
 
     

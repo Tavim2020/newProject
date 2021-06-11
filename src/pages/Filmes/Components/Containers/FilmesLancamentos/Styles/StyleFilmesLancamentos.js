@@ -12,24 +12,6 @@ export const FilmesLancamentosContainer = styled.section`
     background-color: var(--shadow);
     padding-top: 2vw;
 
-    .Title-Lancamentos{
-        width: 21vw;
-        height: 4vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--white);
-        border-top-right-radius: 0.7vw;
-        border-bottom-right-radius: 0.7vw;
-
-        h3{
-            font-size: 3.5vw;
-            font-family: 'BebaNeue';
-            letter-spacing: 0.3vw;
-            padding-top: 0.4vw;
-            color: var(--red);
-        }
-    }
 
     .Wrapper{
         width: auto;

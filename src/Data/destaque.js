@@ -7,6 +7,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capa1917.jpg',
             background: 'imagens/filmes/destaque/1917.png',
             stars: 4.5,
+            link: 'https://assistirfilmesseries.com/1917/',
         },
         {
             id: 1,
@@ -15,6 +16,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaJojoRabbit.jpeg',
             background: 'imagens/filmes/destaque/jojoRabbit.jpg',
             stars: 4,
+            link: 'https://assistirfilmesseries.com/jojo-rabbit/',
         },
         {
             id: 2,
@@ -23,6 +25,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaOPoco.jpg',
             background: 'imagens/filmes/destaque/oPoco.jpg',
             stars: 3.5,
+            link: 'https://assistirfilmesseries.com/o-poco/',
         },
         {
             id: 3,
@@ -31,6 +34,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaViverDuasVezes.jpg',
             background: 'imagens/filmes/destaque/viverDuasVezes.jpg',
             stars: 3.5,
+            link: 'https://cineplayfilmes.com/filme/viver-duas-vezes/',
         },
         {
             id: 4,
@@ -39,6 +43,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaAdoraveisMulheres.jpg',
             background: 'imagens/filmes/destaque/adoraveisMulheres.jpg',
             stars: 3.5,
+            link: 'https://assistirfilmesseries.com/adoraveis-mulheres/',
         },
         {
             id: 5,
@@ -47,6 +52,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaAUltimaCoisaQueEleQueria.jpg',
             background: 'imagens/filmes/destaque/aUltimaCoisaQueEleQueria.jpg',
             stars: 3,
+            link: 'https://cineplayfilmes.com/filme/a-ultima-coisa-que-ele-queria/',
         },
         {
             id: 6,
@@ -55,6 +61,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaModoAviao.jpg',
             background: 'imagens/filmes/destaque/modoAviao.jpg',
             stars: 2.5,
+            link: 'https://cineplayfilmes.com/filme/modo-aviao/',
         },
         {
             id: 7,
@@ -63,6 +70,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaHarriet.jpg',
             background: 'imagens/filmes/destaque/harriet.jpg',
             stars: 4,
+            link: 'https://assistirfilmesseries.com/harriet/',
         },
         {
             id: 8,
@@ -71,6 +79,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaTrocoEmDobro.jpg',
             background: 'imagens/filmes/destaque/trocoEmDobro.jpeg',
             stars: 3.5,
+            link: 'https://cineplayfilmes.com/filme/troco-em-dobro/',
         },
         {
             id: 9,
@@ -79,6 +88,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaIsiEOssi.jpg',
             background: 'imagens/filmes/destaque/isiEOssi.jpg',
             stars: 3,
+            link: 'https://cineplayfilmes.com/filme/isi-ossi/',
         },
         {
             id: 10,
@@ -87,6 +97,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaOEscandalo.jpg',
             background: 'imagens/filmes/destaque/oEscandalo.jpg',
             stars: 1.5,
+            link: 'https://www.filmesonlinehdgratis.com.br/o-escandalo-player-1',
         },
         {
             id: 11,
@@ -95,6 +106,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaAvesDeRapina.jpg',
             background: 'imagens/filmes/destaque/avesDeRapina.jpg',
             stars: 3.5,
+            link: 'https://assistirfilmesseries.com/aves-de-rapina/',
         },
         {
             id: 12,
@@ -103,6 +115,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaParaTodosOsGarotos.jpg',
             background: 'imagens/filmes/destaque/paraTodosOsGarotos.jpg',
             stars: 3,
+            link: 'https://assistirfilmesseries.com/para-todos-os-garotos-ps-ainda-amo-voce/',
         },
         {
             id: 13,
@@ -111,6 +124,7 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaHistoriaDeUmCasamento.jpg',
             background: 'imagens/filmes/destaque/historiaDeUmCasamento.jpg',
             stars: 4,
+            link: 'https://cineplayfilmes.com/filme/historia-de-um-casamento/',
         },
         {
             id: 14,
@@ -119,5 +133,6 @@ module.exports =
             capa: 'imagens/filmes/destaque/capaOIrlandes.jpg',
             background: 'imagens/filmes/destaque/oIrlandes.jpg',
             stars: 5,
+            link: 'https://assistirfilmesseries.com/o-irlandes/',
         },
     ]

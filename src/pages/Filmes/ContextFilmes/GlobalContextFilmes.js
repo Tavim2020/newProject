@@ -2,6 +2,10 @@ import React from 'react';
 import Destaque from '../../../Data/destaque';
 import Lancamentos from '../../../Data/lancamentos';
 import Acao from '../../../Data/acao';
+import Comedia from '../../../Data/comedia';
+import Aventura from '../../../Data/aventura';
+import Drama from '../../../Data/drama';
+import Terror from '../../../Data/terror';
 
 
 
@@ -19,12 +23,8 @@ export const GlobalStorageFilmes = ({children}) =>{
     const capa = React.useRef(null);
     const estrelas = React.useRef(null);
     const FatherStar = React.useRef(null);
-
-    const [retroRight, setRetroRight] = React.useState(false);
-    const [normalRight, setNormalRight] = React.useState(true);
-
-    const [retroLeft, setRetroLeft] = React.useState(false);
-    const [normalLeft, setNormalLeft] = React.useState(true);
+    const [srcManchete, setSrcManchete] = React.useState(Destaque[0].link);
+    const [titlePlay, setTitlePlay] = React.useState(Destaque[0].title);
 
 
     const arrayLancamentos = Lancamentos.slice(1, 15);
@@ -37,6 +37,10 @@ export const GlobalStorageFilmes = ({children}) =>{
         description.current.textContent = Destaque[id].description;
         capa.current.src = Destaque[id].capa;
         estrelas.current = Destaque[id].stars;
+        setSrcManchete(Destaque[id].link);
+        setTitlePlay(Destaque[id].title);
+
+
         const stars = document.querySelector('.Stars');
 
         while(stars.children.length >= 1){
@@ -80,6 +84,8 @@ export const GlobalStorageFilmes = ({children}) =>{
         description.current.textContent = Lancamentos[id].description;
         capa.current.src = Lancamentos[id].capa;
         estrelas.current = Lancamentos[id].stars;
+        setSrcManchete(Lancamentos[id].link);
+        setTitlePlay(Lancamentos[id].title);
         const stars = document.querySelector('.Stars');
 
         while(stars.children.length >= 1){
@@ -114,149 +120,70 @@ export const GlobalStorageFilmes = ({children}) =>{
             FatherStar.current.children[ultimaEstrela].after(div)
 
         }
+
+        window.location.href = '/filmes#Manchete'
     }
 
 
-    function newLoadLeft(event){
-        setNormalRight(false);
-        setRetroRight(true);
-        const childrenOfFather = event.target.parentNode.children;
-
-        const primeiraImg = childrenOfFather.length - 7;
-        childrenOfFather[primeiraImg].style.visibility = 'hidden';
-
-        const penultimaImg = childrenOfFather.length - 2;
-        const antiPenultimaImg = childrenOfFather.length - 3;
-        const centroImg = childrenOfFather.length - 4;
-        const terceiraImg = childrenOfFather.length - 5;
-        const segundaImg = childrenOfFather.length - 6;
-
-        childrenOfFather[penultimaImg].src = Destaque[6].capa;
-        childrenOfFather[antiPenultimaImg].src = Destaque[8].capa;
-        childrenOfFather[centroImg].src = Destaque[10].capa;
-        childrenOfFather[terceiraImg].src = Destaque[12].capa;
-        childrenOfFather[segundaImg].src = Destaque[14].capa;
+    const [normalDiv, setNormalDiv] = React.useState(true);
+    const [leftDiv, setLeftDiv] = React.useState(false);
+    const [rightDiv, setRightDiv] = React.useState(false);
 
 
-        childrenOfFather[penultimaImg].id = Destaque[6].id;
-        childrenOfFather[antiPenultimaImg].id = Destaque[8].id;
-        childrenOfFather[centroImg].id = Destaque[10].id;
-        childrenOfFather[terceiraImg].id = Destaque[12].id;
-        childrenOfFather[segundaImg].id = Destaque[14].id;
-
+    function leftDivTrue(){
+        setNormalDiv(false);
+        setLeftDiv(true);
     }
 
-    function resetFilmes(event){
-        setRetroRight(false);
-        setNormalRight(true);
-
-        const childrenOfFather = event.target.parentNode.children;
-
-        const primeiraImg = childrenOfFather.length - 7;
-        childrenOfFather[primeiraImg].style.visibility = 'visible';
-
-        const penultimaImg = childrenOfFather.length - 2;
-        const antiPenultimaImg = childrenOfFather.length - 3;
-        const centroImg = childrenOfFather.length - 4;
-        const terceiraImg = childrenOfFather.length - 5;
-        const segundaImg = childrenOfFather.length - 6;
-
-        childrenOfFather[penultimaImg].src = Destaque[3].capa;
-        childrenOfFather[antiPenultimaImg].src = Destaque[1].capa;
-        childrenOfFather[centroImg].src = Destaque[0].capa;
-        childrenOfFather[terceiraImg].src = Destaque[2].capa;
-        childrenOfFather[segundaImg].src = Destaque[4].capa;
-
-
-        childrenOfFather[penultimaImg].id = Destaque[3].id;
-        childrenOfFather[antiPenultimaImg].id = Destaque[1].id;
-        childrenOfFather[centroImg].id = Destaque[0].id;
-        childrenOfFather[terceiraImg].id = Destaque[2].id;
-        childrenOfFather[segundaImg].id = Destaque[4].id;
+    function resetFilmes(){
+        setLeftDiv(false);
+        setNormalDiv(true);
+        setRightDiv(false);
     }
 
-
-    function newLoadRight(event){
-        setNormalLeft(false);
-        setRetroLeft(true);
-
-        const childrenOfFather = event.target.parentNode.children;
-
-        const ultimaImg = childrenOfFather.length - 1;
-        childrenOfFather[ultimaImg].style.visibility = 'hidden';
-
-        const penultimaImg = childrenOfFather.length - 2;
-        const antiPenultimaImg = childrenOfFather.length - 3;
-        const centroImg = childrenOfFather.length - 4;
-        const terceiraImg = childrenOfFather.length - 5;
-        const segundaImg = childrenOfFather.length - 6;
-
-        childrenOfFather[penultimaImg].src = Destaque[13].capa;
-        childrenOfFather[antiPenultimaImg].src = Destaque[11].capa;
-        childrenOfFather[centroImg].src = Destaque[9].capa;
-        childrenOfFather[terceiraImg].src = Destaque[7].capa;
-        childrenOfFather[segundaImg].src = Destaque[5].capa;
-
-
-        childrenOfFather[penultimaImg].id = Destaque[13].id;
-        childrenOfFather[antiPenultimaImg].id = Destaque[11].id;
-        childrenOfFather[centroImg].id = Destaque[9].id;
-        childrenOfFather[terceiraImg].id = Destaque[7].id;
-        childrenOfFather[segundaImg].id = Destaque[5].id;
+    function rightDivTrue(){
+        setNormalDiv(false);
+        setRightDiv(true);
     }
 
-
-    function resetFilmesTwo(event){
-        setRetroLeft(false);
-        setNormalLeft(true);
-
-        const childrenOfFather = event.target.parentNode.children;
-
-        const ultimaImg = childrenOfFather.length - 1;
-        childrenOfFather[ultimaImg].style.visibility = 'visible';
-
-        const penultimaImg = childrenOfFather.length - 2;
-        const antiPenultimaImg = childrenOfFather.length - 3;
-        const centroImg = childrenOfFather.length - 4;
-        const terceiraImg = childrenOfFather.length - 5;
-        const segundaImg = childrenOfFather.length - 6;
-
-        childrenOfFather[penultimaImg].src = Destaque[3].capa;
-        childrenOfFather[antiPenultimaImg].src = Destaque[1].capa;
-        childrenOfFather[centroImg].src = Destaque[0].capa;
-        childrenOfFather[terceiraImg].src = Destaque[2].capa;
-        childrenOfFather[segundaImg].src = Destaque[4].capa;
-
-
-        childrenOfFather[penultimaImg].id = Destaque[3].id;
-        childrenOfFather[antiPenultimaImg].id = Destaque[1].id;
-        childrenOfFather[centroImg].id = Destaque[0].id;
-        childrenOfFather[terceiraImg].id = Destaque[2].id;
-        childrenOfFather[segundaImg].id = Destaque[4].id;
-    }
 
 
     const divLancamentosFilmes = React.useRef(null);
     
     function moveFilmeAuto(event){
-        const scroll = divLancamentosFilmes.current;
+        const scroll = event.target.parentNode.parentNode;
+        const scrollFirst = event.target.parentNode;
 
         setTimeout(()=>{
             if(event.screenX >= 1200){
-                    scroll.scrollLeft+= 100;     
+                    scroll.scrollLeft+= 100; 
+                    scrollFirst.scrollLeft+= 100;   
             }
             else if(event.screenX <= 150){
                 scroll.scrollLeft-= 100;
+                scrollFirst.scrollLeft-= 100;
             }
     
         }, 500)
     }
 
 
+    function moveFilmeAutoTwo(event){
+        const scroll = event.target.parentNode.parentNode.parentNode;
+        console.log(event)
+
+            if(event.screenX >=1200){
+                scroll.scrollLeft+= 100;     
+            }
+            else if(event.screenX <= 150){
+                scroll.scrollLeft-= 100;
+            }
+    }
+
+
     // Acao - Estados e funções
-    const [firstFilme, setFirstFilme] = React.useState(false);
     const [UltimoFilme, setUltimoFilme] = React.useState(false);
-    const arrayFilmes = Acao.slice(1, 9);
+    const arrayFilmes = Acao.slice(0, 9);
     const lastFilme = [];
     const [state, setState] = React.useState(false);
     const [state1, setState1] = React.useState(false);
@@ -270,22 +197,20 @@ export const GlobalStorageFilmes = ({children}) =>{
 
 
 
-
-    lastFilme[1] = state;
-    lastFilme[2] = state1;
-    lastFilme[3] = state2;
-    lastFilme[4] = state3;
-    lastFilme[5] = state4;
-    lastFilme[6] = state5;
-    lastFilme[7] = state6;
-    lastFilme[8] = state7;
-    lastFilme[9] = state8;
+    lastFilme[0] = state;
+    lastFilme[1] = state1;
+    lastFilme[2] = state2;
+    lastFilme[3] = state3;
+    lastFilme[4] = state4;
+    lastFilme[5] = state5;
+    lastFilme[6] = state6;
+    lastFilme[7] = state7;
+    lastFilme[8] = state8;
 
     function moreState(event){
-        setFirstFilme(false);
         setUltimoFilme(false);
-
-       if(Number(event.target.id) === 1){
+        
+        if(Number(event.target.id) === 0){
             setState(true); 
 
             setState1(false);
@@ -297,32 +222,37 @@ export const GlobalStorageFilmes = ({children}) =>{
             setState7(false);
             setState8(false);
        }
-       if(Number(event.target.id) === 2){
+
+
+       if(Number(event.target.id) === 1){
             setState1(true); 
 
-            setState(false);
+            setState(false)
             setState2(false);
             setState3(false);
             setState4(false);
             setState5(false);
             setState6(false);
             setState7(false);
-            setState8(false);
-        }
-        if(Number(event.target.id) === 3){
-            setState2(true);
-
-            setState(false);
-            setState1(false);
-            setState3(false);
-            setState4(false);
-            setState5(false);
-            setState6(false);
-            setState7(false);
-            setState8(false); 
+            setState8(false);;
        }
-       if(Number(event.target.id) === 4){
-            setState3(true); 
+
+       if(Number(event.target.id) === 2){
+            setState2(true); 
+
+
+            setState(false)
+            setState1(false);
+            setState3(false);
+            setState4(false);
+            setState5(false);
+            setState6(false);
+            setState7(false);
+            setState8(false);;
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3(true);
 
             setState(false);
             setState1(false);
@@ -331,9 +261,10 @@ export const GlobalStorageFilmes = ({children}) =>{
             setState5(false);
             setState6(false);
             setState7(false);
-            setState8(false);
-        }
-        if(Number(event.target.id) === 5){
+            setState8(false); ;
+       }
+
+       if(Number(event.target.id) === 4){
             setState4(true); 
 
             setState(false);
@@ -343,35 +274,38 @@ export const GlobalStorageFilmes = ({children}) =>{
             setState5(false);
             setState6(false);
             setState7(false);
-            setState8(false);
+            setState8(false);;
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5(true); 
+
+            setState(false);
+            setState1(false);
+            setState2(false);
+            setState3(false);
+            setState4(false);
+            setState6(false);
+            setState7(false);
+            setState8(false);;
        }
        if(Number(event.target.id) === 6){
-            setState5(true);
+            setState6(true);
 
+    
             setState(false);
             setState1(false);
             setState2(false);
             setState3(false);
             setState4(false);
-            setState6(false);
+            setState5(false);
             setState7(false);
-            setState8(false); 
+            setState8(false); ;
         }
         if(Number(event.target.id) === 7){
-            setState6(true); 
-
-            setState(false);
-            setState1(false);
-            setState2(false);
-            setState3(false);
-            setState4(false);
-            setState5(false);
-            setState7(false);
-            setState8(false);
-       }
-       if(Number(event.target.id) === 8){
             setState7(true); 
 
+    
             setState(false);
             setState1(false);
             setState2(false);
@@ -379,11 +313,12 @@ export const GlobalStorageFilmes = ({children}) =>{
             setState4(false);
             setState5(false);
             setState6(false);
-            setState8(false);
-        }
-        if(Number(event.target.id) === 9){
+            setState8(false);;
+       }
+       if(Number(event.target.id) === 8){
             setState8(true); 
 
+    
             setState(false);
             setState1(false);
             setState2(false);
@@ -393,27 +328,9 @@ export const GlobalStorageFilmes = ({children}) =>{
             setState6(false);
             setState7(false);
         }
-
-    }
-
-
-    function moveState(){
-        setState(false);
-        setState1(false);
-        setState2(false);
-        setState3(false);
-        setState4(false);
-        setState5(false);
-        setState6(false);
-        setState7(false);
-        setState8(false);
-        setUltimoFilme(false);
-
-        setFirstFilme(true);
     }
 
     function moveUltimoState(){
-        setFirstFilme(false);
         setState(false);
         setState1(false);
         setState2(false);
@@ -428,22 +345,695 @@ export const GlobalStorageFilmes = ({children}) =>{
     }
    
 
+    // Comedia
+    const [UltimoFilmeComedia, setUltimoFilmeComedia] = React.useState(false);
+    const arrayFilmesComedia = Comedia.slice(0, 9);
+    const lastFilmeComedia = [];
+
+
+    const [stateComedia, setStateComedia] = React.useState(false);
+    const [state1Comedia, setState1Comedia] = React.useState(false);
+    const [state2Comedia, setState2Comedia] = React.useState(false);
+    const [state3Comedia, setState3Comedia] = React.useState(false);
+    const [state4Comedia, setState4Comedia] = React.useState(false);
+    const [state5Comedia, setState5Comedia] = React.useState(false);
+    const [state6Comedia, setState6Comedia] = React.useState(false);
+    const [state7Comedia, setState7Comedia] = React.useState(false);
+    const [state8Comedia, setState8Comedia] = React.useState(false);
+
+    lastFilmeComedia[0] = stateComedia;
+    lastFilmeComedia[1] = state1Comedia;
+    lastFilmeComedia[2] = state2Comedia;
+    lastFilmeComedia[3] = state3Comedia;
+    lastFilmeComedia[4] = state4Comedia;
+    lastFilmeComedia[5] = state5Comedia;
+    lastFilmeComedia[6] = state6Comedia;
+    lastFilmeComedia[7] = state7Comedia;
+    lastFilmeComedia[8] = state8Comedia;
+
+
+
+    function moreStateComedia(event){
+        setUltimoFilmeComedia(false);
+
+        if(Number(event.target.id) === 0){
+            setStateComedia(true); 
+
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Comedia(true); 
+
+            setStateComedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Comedia(true); 
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Comedia(true);
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Comedia(true); 
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Comedia(true); 
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Comedia(true);
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState7Comedia(false);
+            setState8Comedia(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Comedia(true); 
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState8Comedia(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Comedia(true); 
+
+            setStateComedia(false);
+            setState1Comedia(false);
+            setState2Comedia(false);
+            setState3Comedia(false);
+            setState4Comedia(false);
+            setState5Comedia(false);
+            setState6Comedia(false);
+            setState7Comedia(false);
+        }
+
+    }
+
+    function moveUltimoStateComedia(){
+        setStateComedia(false);
+        setState1Comedia(false);
+        setState2Comedia(false);
+        setState3Comedia(false);
+        setState4Comedia(false);
+        setState5Comedia(false);
+        setState6Comedia(false);
+        setState7Comedia(false);
+        setState8Comedia(false);
+
+        setUltimoFilmeComedia(true);
+    }
+
+
+    // Aventura
+    const [ultimoFilmeAventura, setUltimoFilmeAventura] = React.useState(false);
+    const arrayFilmesAventura = Aventura.slice(0, 9);
+    const lastFilmeAventura = [];
+
+
+    const [stateAventura, setStateAventura] = React.useState(false);
+    const [state1Aventura, setState1Aventura] = React.useState(false);
+    const [state2Aventura, setState2Aventura] = React.useState(false);
+    const [state3Aventura, setState3Aventura] = React.useState(false);
+    const [state4Aventura, setState4Aventura] = React.useState(false);
+    const [state5Aventura, setState5Aventura] = React.useState(false);
+    const [state6Aventura, setState6Aventura] = React.useState(false);
+    const [state7Aventura, setState7Aventura] = React.useState(false);
+    const [state8Aventura, setState8Aventura] = React.useState(false);
+
+    lastFilmeAventura[0] = stateAventura;
+    lastFilmeAventura[1] = state1Aventura;
+    lastFilmeAventura[2] = state2Aventura;
+    lastFilmeAventura[3] = state3Aventura;
+    lastFilmeAventura[4] = state4Aventura;
+    lastFilmeAventura[5] = state5Aventura;
+    lastFilmeAventura[6] = state6Aventura;
+    lastFilmeAventura[7] = state7Aventura;
+    lastFilmeAventura[8] = state8Aventura;
+
+
+
+    function moreStateAventura(event){
+        setUltimoFilmeAventura(false);
+
+        if(Number(event.target.id) === 0){
+            setStateAventura(true); 
+
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Aventura(true); 
+
+            setStateAventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Aventura(true); 
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Aventura(true);
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Aventura(true); 
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Aventura(true); 
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Aventura(true);
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState7Aventura(false);
+            setState8Aventura(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Aventura(true); 
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState8Aventura(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Aventura(true); 
+
+            setStateAventura(false);
+            setState1Aventura(false);
+            setState2Aventura(false);
+            setState3Aventura(false);
+            setState4Aventura(false);
+            setState5Aventura(false);
+            setState6Aventura(false);
+            setState7Aventura(false);
+        }
+
+    }
+
+    function moveUltimoStateAventura(){
+        setStateAventura(false);
+        setState1Aventura(false);
+        setState2Aventura(false);
+        setState3Aventura(false);
+        setState4Aventura(false);
+        setState5Aventura(false);
+        setState6Aventura(false);
+        setState7Aventura(false);
+        setState8Aventura(false);
+
+        setUltimoFilmeAventura(true);
+    }
+    
+
+    // Drama
+    const [ultimoFilmeDrama, setUltimoFilmeDrama] = React.useState(false);
+    const arrayFilmesDrama = Drama.slice(0, 9);
+    const lastFilmeDrama = [];
+
+
+    const [stateDrama, setStateDrama] = React.useState(false);
+    const [state1Drama, setState1Drama] = React.useState(false);
+    const [state2Drama, setState2Drama] = React.useState(false);
+    const [state3Drama, setState3Drama] = React.useState(false);
+    const [state4Drama, setState4Drama] = React.useState(false);
+    const [state5Drama, setState5Drama] = React.useState(false);
+    const [state6Drama, setState6Drama] = React.useState(false);
+    const [state7Drama, setState7Drama] = React.useState(false);
+    const [state8Drama, setState8Drama] = React.useState(false);
+
+    lastFilmeDrama[0] = stateDrama;
+    lastFilmeDrama[1] = state1Drama;
+    lastFilmeDrama[2] = state2Drama;
+    lastFilmeDrama[3] = state3Drama;
+    lastFilmeDrama[4] = state4Drama;
+    lastFilmeDrama[5] = state5Drama;
+    lastFilmeDrama[6] = state6Drama;
+    lastFilmeDrama[7] = state7Drama;
+    lastFilmeDrama[8] = state8Drama;
+
+
+
+    function moreStateDrama(event){
+        setUltimoFilmeDrama(false);
+
+        if(Number(event.target.id) === 0){
+            setStateDrama(true); 
+
+            setState1Drama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+            setState8Drama(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Drama(true); 
+
+            setStateDrama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+            setState8Drama(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Drama(true); 
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+            setState8Drama(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Drama(true);
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState2Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+            setState8Drama(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Drama(true); 
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+            setState8Drama(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Drama(true); 
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+            setState8Drama(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Drama(true);
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState7Drama(false);
+            setState8Drama(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Drama(true); 
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState8Drama(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Drama(true); 
+
+            setStateDrama(false);
+            setState1Drama(false);
+            setState2Drama(false);
+            setState3Drama(false);
+            setState4Drama(false);
+            setState5Drama(false);
+            setState6Drama(false);
+            setState7Drama(false);
+        }
+
+    }
+
+    function moveUltimoStateDrama(){
+        setStateDrama(false);
+        setState1Drama(false);
+        setState2Drama(false);
+        setState3Drama(false);
+        setState4Drama(false);
+        setState5Drama(false);
+        setState6Drama(false);
+        setState7Drama(false);
+        setState8Drama(false);
+
+        setUltimoFilmeDrama(true);
+    }
+
+
+    // Terror
+    const [ultimoFilmeTerror, setUltimoFilmeTerror] = React.useState(false);
+    const arrayFilmesTerror = Terror.slice(0, 9);
+    const lastFilmeTerror = [];
+
+
+    const [stateTerror, setStateTerror] = React.useState(false);
+    const [state1Terror, setState1Terror] = React.useState(false);
+    const [state2Terror, setState2Terror] = React.useState(false);
+    const [state3Terror, setState3Terror] = React.useState(false);
+    const [state4Terror, setState4Terror] = React.useState(false);
+    const [state5Terror, setState5Terror] = React.useState(false);
+    const [state6Terror, setState6Terror] = React.useState(false);
+    const [state7Terror, setState7Terror] = React.useState(false);
+    const [state8Terror, setState8Terror] = React.useState(false);
+
+    lastFilmeTerror[0] = stateTerror;
+    lastFilmeTerror[1] = state1Terror;
+    lastFilmeTerror[2] = state2Terror;
+    lastFilmeTerror[3] = state3Terror;
+    lastFilmeTerror[4] = state4Terror;
+    lastFilmeTerror[5] = state5Terror;
+    lastFilmeTerror[6] = state6Terror;
+    lastFilmeTerror[7] = state7Terror;
+    lastFilmeTerror[8] = state8Terror;
+
+
+
+    function moreStateTerror(event){
+        setUltimoFilmeTerror(false);
+
+        if(Number(event.target.id) === 0){
+            setStateTerror(true); 
+
+            setState1Terror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+            setState8Terror(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Terror(true); 
+
+            setStateTerror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+            setState8Terror(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Terror(true); 
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+            setState8Terror(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Terror(true);
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState2Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+            setState8Terror(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Terror(true); 
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+            setState8Terror(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Terror(true); 
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+            setState8Terror(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Terror(true);
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState7Terror(false);
+            setState8Terror(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Terror(true); 
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState8Terror(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Terror(true); 
+
+            setStateTerror(false);
+            setState1Terror(false);
+            setState2Terror(false);
+            setState3Terror(false);
+            setState4Terror(false);
+            setState5Terror(false);
+            setState6Terror(false);
+            setState7Terror(false);
+        }
+
+    }
+
+    function moveUltimoStateTerror(){
+        setStateTerror(false);
+        setState1Terror(false);
+        setState2Terror(false);
+        setState3Terror(false);
+        setState4Terror(false);
+        setState5Terror(false);
+        setState6Terror(false);
+        setState7Terror(false);
+        setState8Terror(false);
+
+        setUltimoFilmeTerror(true);
+    }
+
     return(
     <GlobalContextFilmes.Provider value={{
         moveManchete,
         moveMancheteTwo,
-        newLoadLeft,
+        leftDivTrue,
         resetFilmes,
-        newLoadRight,
-        resetFilmesTwo,
+        rightDivTrue,
         moveFilmeAuto,
-        moveState,
+        moveFilmeAutoTwo,
         moreState,
-        moveUltimoState,
-        retroLeft,
-        normalRight,
-        retroRight,
-        normalLeft,
+        moveUltimoState, 
+        moreStateComedia,
+        moveUltimoStateComedia,
+        moreStateAventura,
+        moveUltimoStateAventura,
+        moreStateDrama,
+        moveUltimoStateDrama,
+        moreStateTerror,
+        moveUltimoStateTerror,
+        normalDiv,
+        leftDiv,
+        rightDiv,
         arrayLancamentos,
         backgroundImage,
         title,
@@ -454,10 +1044,27 @@ export const GlobalStorageFilmes = ({children}) =>{
         description,
         divLancamentosFilmes,
         Acao,
-        firstFilme,
         arrayFilmes,
         lastFilme,
         UltimoFilme,
+        Comedia,
+        UltimoFilmeComedia,
+        arrayFilmesComedia,
+        lastFilmeComedia,
+        srcManchete,
+        titlePlay,
+        ultimoFilmeAventura,
+        arrayFilmesAventura,
+        Aventura,
+        lastFilmeAventura,
+        ultimoFilmeDrama,
+        arrayFilmesDrama,
+        Drama,
+        lastFilmeDrama,
+        ultimoFilmeTerror,
+        arrayFilmesTerror,
+        Terror,
+        lastFilmeTerror,
     }}>
         {children}
     </GlobalContextFilmes.Provider>

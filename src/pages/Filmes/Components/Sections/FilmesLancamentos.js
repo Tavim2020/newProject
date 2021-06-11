@@ -1,5 +1,5 @@
 import React from 'react'
-import BarTitleLancamentos from '../Containers/FilmesLancamentos/BarTitleLancamentos';
+import BarTitle from '../BarTitle/BarTitle';
 import { FilmesLancamentosContainer } from '../Containers/FilmesLancamentos/Styles/StyleFilmesLancamentos';
 import WrapperLancamentos from '../Containers/FilmesLancamentos/WrapperLancamentos';
 
@@ -7,7 +7,9 @@ const FilmesLanccamentos = () => {
     return (
         <FilmesLancamentosContainer >
 
-            <BarTitleLancamentos />
+            <BarTitle colorText='#F93535' bgcolor='#fff'>
+                Lançamentos
+            </BarTitle>
 
             <WrapperLancamentos />
 

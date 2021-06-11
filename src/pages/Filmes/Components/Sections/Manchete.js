@@ -11,7 +11,7 @@ const Manchete = () => {
     const { backgroundImage, Destaque } = React.useContext(GlobalContextFilmes);
 
     return (
-        <MancheteContainer>
+        <MancheteContainer id='Manchete'>
 
             <img  ref={backgroundImage} className='Background-Image' src={Destaque[0].background} alt={Destaque[0].title}/>
 
