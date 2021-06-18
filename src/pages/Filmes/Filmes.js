@@ -8,6 +8,10 @@ import Comedia from './Components/Sections/Comedia';
 import Aventura from './Components/Sections/Aventura';
 import Drama from './Components/Sections/Drama';
 import Terror from './Components/Sections/Terror';
+import FiccaoCientifica from './Components/Sections/FiccaoCientifica';
+import Romance from './Components/Sections/Romance';
+import Musical from './Components/Sections/Musical';
+import Historico from './Components/Sections/Historico';
 
 
 const Filmes = () => {
@@ -42,6 +46,14 @@ const Filmes = () => {
             <Drama />
 
             <Terror />
+
+            <FiccaoCientifica />
+
+            <Romance />
+
+            <Musical />
+
+            <Historico />
         
         </FilmesPage>
     )

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BarTitleContainer = styled.div`
-        width: 21vw;
+        width: 30vw;
         height: 4vw;
         display: flex;
         align-items: center;

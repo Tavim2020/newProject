@@ -6,6 +6,10 @@ import Comedia from '../../../Data/comedia';
 import Aventura from '../../../Data/aventura';
 import Drama from '../../../Data/drama';
 import Terror from '../../../Data/terror';
+import Ficcao from '../../../Data/ficcao-cientifica';
+import Romance from '../../../Data/romance';
+import Musical from '../../../Data/musical';
+import Historico from '../../../Data/historico';
 
 
 
@@ -1012,6 +1016,680 @@ export const GlobalStorageFilmes = ({children}) =>{
         setUltimoFilmeTerror(true);
     }
 
+
+    // Ficcao Cientifica
+
+     const [ultimoFilmeFiccao, setUltimoFilmeFiccao] = React.useState(false);
+     const arrayFilmesFiccao = Ficcao.slice(0, 9);
+     const lastFilmeFiccao = [];
+ 
+ 
+     const [stateFiccao, setStateFiccao] = React.useState(false);
+     const [state1Ficcao, setState1Ficcao] = React.useState(false);
+     const [state2Ficcao, setState2Ficcao] = React.useState(false);
+     const [state3Ficcao, setState3Ficcao] = React.useState(false);
+     const [state4Ficcao, setState4Ficcao] = React.useState(false);
+     const [state5Ficcao, setState5Ficcao] = React.useState(false);
+     const [state6Ficcao, setState6Ficcao] = React.useState(false);
+     const [state7Ficcao, setState7Ficcao] = React.useState(false);
+     const [state8Ficcao, setState8Ficcao] = React.useState(false);
+ 
+     lastFilmeFiccao[0] = stateFiccao;
+     lastFilmeFiccao[1] = state1Ficcao;
+     lastFilmeFiccao[2] = state2Ficcao;
+     lastFilmeFiccao[3] = state3Ficcao;
+     lastFilmeFiccao[4] = state4Ficcao;
+     lastFilmeFiccao[5] = state5Ficcao;
+     lastFilmeFiccao[6] = state6Ficcao;
+     lastFilmeFiccao[7] = state7Ficcao;
+     lastFilmeFiccao[8] = state8Ficcao;
+ 
+ 
+ 
+     function moreStateFiccao(event){
+         setUltimoFilmeFiccao(false);
+ 
+         if(Number(event.target.id) === 0){
+             setStateFiccao(true); 
+ 
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false);
+        }
+ 
+ 
+ 
+        if(Number(event.target.id) === 1){
+             setState1Ficcao(true); 
+ 
+             setStateFiccao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false);
+        }
+ 
+        if(Number(event.target.id) === 2){
+             setState2Ficcao(true); 
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false);
+         }
+ 
+         if(Number(event.target.id) === 3){
+             setState3Ficcao(true);
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false); 
+        }
+ 
+        if(Number(event.target.id) === 4){
+             setState4Ficcao(true); 
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false);
+         }
+ 
+         if(Number(event.target.id) === 5){
+             setState5Ficcao(true); 
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false);
+        }
+ 
+        if(Number(event.target.id) === 6){
+             setState6Ficcao(true);
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState7Ficcao(false);
+             setState8Ficcao(false); 
+         }
+ 
+         if(Number(event.target.id) === 7){
+             setState7Ficcao(true); 
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState8Ficcao(false);
+        }
+ 
+        if(Number(event.target.id) === 8){
+             setState8Ficcao(true); 
+ 
+             setStateFiccao(false);
+             setState1Ficcao(false);
+             setState2Ficcao(false);
+             setState3Ficcao(false);
+             setState4Ficcao(false);
+             setState5Ficcao(false);
+             setState6Ficcao(false);
+             setState7Ficcao(false);
+         }
+ 
+     }
+ 
+     function moveUltimoStateFiccao(){
+         setStateFiccao(false);
+         setState1Ficcao(false);
+         setState2Ficcao(false);
+         setState3Ficcao(false);
+         setState4Ficcao(false);
+         setState5Ficcao(false);
+         setState6Ficcao(false);
+         setState7Ficcao(false);
+         setState8Ficcao(false);
+ 
+         setUltimoFilmeFiccao(true);
+     }
+
+
+    //  Romance
+
+    const [ultimoFilmeRomance, setUltimoFilmeRomance] = React.useState(false);
+    const arrayFilmesRomance = Romance.slice(0, 9);
+    const lastFilmeRomance = [];
+
+
+    const [stateRomance, setStateRomance] = React.useState(false);
+    const [state1Romance, setState1Romance] = React.useState(false);
+    const [state2Romance, setState2Romance] = React.useState(false);
+    const [state3Romance, setState3Romance] = React.useState(false);
+    const [state4Romance, setState4Romance] = React.useState(false);
+    const [state5Romance, setState5Romance] = React.useState(false);
+    const [state6Romance, setState6Romance] = React.useState(false);
+    const [state7Romance, setState7Romance] = React.useState(false);
+    const [state8Romance, setState8Romance] = React.useState(false);
+
+    lastFilmeRomance[0] = stateRomance;
+    lastFilmeRomance[1] = state1Romance;
+    lastFilmeRomance[2] = state2Romance;
+    lastFilmeRomance[3] = state3Romance;
+    lastFilmeRomance[4] = state4Romance;
+    lastFilmeRomance[5] = state5Romance;
+    lastFilmeRomance[6] = state6Romance;
+    lastFilmeRomance[7] = state7Romance;
+    lastFilmeRomance[8] = state8Romance;
+
+
+
+    function moreStateRomance(event){
+        setUltimoFilmeRomance(false);
+
+        if(Number(event.target.id) === 0){
+            setStateRomance(true); 
+
+            setState1Romance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+            setState8Romance(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Romance(true); 
+
+            setStateRomance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+            setState8Romance(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Romance(true); 
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+            setState8Romance(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Romance(true);
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState2Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+            setState8Romance(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Romance(true); 
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+            setState8Romance(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Romance(true); 
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+            setState8Romance(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Romance(true);
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState7Romance(false);
+            setState8Romance(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Romance(true); 
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState8Romance(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Romance(true); 
+
+            setStateRomance(false);
+            setState1Romance(false);
+            setState2Romance(false);
+            setState3Romance(false);
+            setState4Romance(false);
+            setState5Romance(false);
+            setState6Romance(false);
+            setState7Romance(false);
+        }
+
+    }
+
+    function moveUltimoStateRomance(){
+        setStateRomance(false);
+        setState1Romance(false);
+        setState2Romance(false);
+        setState3Romance(false);
+        setState4Romance(false);
+        setState5Romance(false);
+        setState6Romance(false);
+        setState7Romance(false);
+        setState8Romance(false);
+
+        setUltimoFilmeRomance(true);
+    }
+
+
+
+    // Musical
+
+    const [ultimoFilmeMusical, setUltimoFilmeMusical] = React.useState(false);
+    const arrayFilmesMusical = Musical.slice(0, 9);
+    const lastFilmeMusical = [];
+
+
+    const [stateMusical, setStateMusical] = React.useState(false);
+    const [state1Musical, setState1Musical] = React.useState(false);
+    const [state2Musical, setState2Musical] = React.useState(false);
+    const [state3Musical, setState3Musical] = React.useState(false);
+    const [state4Musical, setState4Musical] = React.useState(false);
+    const [state5Musical, setState5Musical] = React.useState(false);
+    const [state6Musical, setState6Musical] = React.useState(false);
+    const [state7Musical, setState7Musical] = React.useState(false);
+    const [state8Musical, setState8Musical] = React.useState(false);
+
+    lastFilmeMusical[0] = stateMusical;
+    lastFilmeMusical[1] = state1Musical;
+    lastFilmeMusical[2] = state2Musical;
+    lastFilmeMusical[3] = state3Musical;
+    lastFilmeMusical[4] = state4Musical;
+    lastFilmeMusical[5] = state5Musical;
+    lastFilmeMusical[6] = state6Musical;
+    lastFilmeMusical[7] = state7Musical;
+    lastFilmeMusical[8] = state8Musical;
+
+
+
+    function moreStateMusical(event){
+        setUltimoFilmeMusical(false);
+
+        if(Number(event.target.id) === 0){
+            setStateMusical(true); 
+
+            setState1Musical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+            setState8Musical(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Musical(true); 
+
+            setStateMusical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+            setState8Musical(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Musical(true); 
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+            setState8Musical(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Musical(true);
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState2Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+            setState8Musical(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Musical(true); 
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+            setState8Musical(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Musical(true); 
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+            setState8Musical(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Musical(true);
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState7Musical(false);
+            setState8Musical(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Musical(true); 
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState8Musical(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Musical(true); 
+
+            setStateMusical(false);
+            setState1Musical(false);
+            setState2Musical(false);
+            setState3Musical(false);
+            setState4Musical(false);
+            setState5Musical(false);
+            setState6Musical(false);
+            setState7Musical(false);
+        }
+
+    }
+
+    function moveUltimoStateMusical(){
+        setStateMusical(false);
+        setState1Musical(false);
+        setState2Musical(false);
+        setState3Musical(false);
+        setState4Musical(false);
+        setState5Musical(false);
+        setState6Musical(false);
+        setState7Musical(false);
+        setState8Musical(false);
+
+        setUltimoFilmeMusical(true);
+    }
+
+
+    // Historico
+
+    const [ultimoFilmeHistorico, setUltimoFilmeHistorico] = React.useState(false);
+    const arrayFilmesHistorico = Historico.slice(0, 9);
+    const lastFilmeHistorico = [];
+
+
+    const [stateHistorico, setStateHistorico] = React.useState(false);
+    const [state1Historico, setState1Historico] = React.useState(false);
+    const [state2Historico, setState2Historico] = React.useState(false);
+    const [state3Historico, setState3Historico] = React.useState(false);
+    const [state4Historico, setState4Historico] = React.useState(false);
+    const [state5Historico, setState5Historico] = React.useState(false);
+    const [state6Historico, setState6Historico] = React.useState(false);
+    const [state7Historico, setState7Historico] = React.useState(false);
+    const [state8Historico, setState8Historico] = React.useState(false);
+
+    lastFilmeHistorico[0] = stateHistorico;
+    lastFilmeHistorico[1] = state1Historico;
+    lastFilmeHistorico[2] = state2Historico;
+    lastFilmeHistorico[3] = state3Historico;
+    lastFilmeHistorico[4] = state4Historico;
+    lastFilmeHistorico[5] = state5Historico;
+    lastFilmeHistorico[6] = state6Historico;
+    lastFilmeHistorico[7] = state7Historico;
+    lastFilmeHistorico[8] = state8Historico;
+
+
+
+    function moreStateHistorico(event){
+        setUltimoFilmeHistorico(false);
+
+        if(Number(event.target.id) === 0){
+            setStateHistorico(true); 
+
+            setState1Historico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+            setState8Historico(false);
+       }
+
+
+
+       if(Number(event.target.id) === 1){
+            setState1Historico(true); 
+
+            setStateHistorico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+            setState8Historico(false);
+       }
+
+       if(Number(event.target.id) === 2){
+            setState2Historico(true); 
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+            setState8Historico(false);
+        }
+
+        if(Number(event.target.id) === 3){
+            setState3Historico(true);
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState2Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+            setState8Historico(false); 
+       }
+
+       if(Number(event.target.id) === 4){
+            setState4Historico(true); 
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+            setState8Historico(false);
+        }
+
+        if(Number(event.target.id) === 5){
+            setState5Historico(true); 
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+            setState8Historico(false);
+       }
+
+       if(Number(event.target.id) === 6){
+            setState6Historico(true);
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState7Historico(false);
+            setState8Historico(false); 
+        }
+
+        if(Number(event.target.id) === 7){
+            setState7Historico(true); 
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState8Historico(false);
+       }
+
+       if(Number(event.target.id) === 8){
+            setState8Historico(true); 
+
+            setStateHistorico(false);
+            setState1Historico(false);
+            setState2Historico(false);
+            setState3Historico(false);
+            setState4Historico(false);
+            setState5Historico(false);
+            setState6Historico(false);
+            setState7Historico(false);
+        }
+
+    }
+
+    function moveUltimoStateHistorico(){
+        setStateHistorico(false);
+        setState1Historico(false);
+        setState2Historico(false);
+        setState3Historico(false);
+        setState4Historico(false);
+        setState5Historico(false);
+        setState6Historico(false);
+        setState7Historico(false);
+        setState8Historico(false);
+
+        setUltimoFilmeHistorico(true);
+    }
+
+
     return(
     <GlobalContextFilmes.Provider value={{
         moveManchete,
@@ -1031,6 +1709,14 @@ export const GlobalStorageFilmes = ({children}) =>{
         moveUltimoStateDrama,
         moreStateTerror,
         moveUltimoStateTerror,
+        moreStateFiccao,
+        moveUltimoStateFiccao,
+        moreStateRomance,
+        moveUltimoStateRomance,
+        moreStateMusical,
+        moveUltimoStateMusical,
+        moreStateHistorico,
+        moveUltimoStateHistorico,
         normalDiv,
         leftDiv,
         rightDiv,
@@ -1065,6 +1751,22 @@ export const GlobalStorageFilmes = ({children}) =>{
         arrayFilmesTerror,
         Terror,
         lastFilmeTerror,
+        ultimoFilmeFiccao,
+        arrayFilmesFiccao,
+        Ficcao,
+        lastFilmeFiccao,
+        ultimoFilmeRomance,
+        arrayFilmesRomance,
+        Romance,
+        lastFilmeRomance,
+        ultimoFilmeMusical,
+        arrayFilmesMusical,
+        Musical,
+        lastFilmeMusical,
+        ultimoFilmeHistorico,
+        arrayFilmesHistorico,
+        Historico,
+        lastFilmeHistorico,
     }}>
         {children}
     </GlobalContextFilmes.Provider>

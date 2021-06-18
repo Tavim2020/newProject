@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.div`
+    max-width: 60%;
     height: 4vw;
     border-radius: 2vw;
     background-color: var(--platium);

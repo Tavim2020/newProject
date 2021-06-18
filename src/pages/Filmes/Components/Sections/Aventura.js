@@ -40,7 +40,7 @@ const Aventura = () => {
     return (
         <AventuraContainer brilho={brilho} onMouseOver={adicionarBrilho} onMouseOut={removerBrilho}>
 
-            <BarTitle colorText='#fff' bgcolor='#F93535'>
+            <BarTitle colorText='#fff' bgcolor='#ff7200'>
                 Aventura
             </BarTitle>
 

@@ -40,7 +40,7 @@ const Drama = () => {
     return (
         <DramaContainer brilho={brilho} onMouseOver={adicionarBrilho} onMouseOut={removerBrilho}>
 
-            <BarTitle colorText='#fff' bgcolor='#F93535'>
+            <BarTitle colorText='#fff' bgcolor='#ceaf00'>
                 Drama
             </BarTitle>
 

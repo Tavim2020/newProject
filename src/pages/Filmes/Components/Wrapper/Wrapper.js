@@ -171,6 +171,7 @@ const WrapperContainer = styled.div`
                     background-color: var(--estrela);
                     h3{
                         color: var(--white);
+                        font-size: 1.1vw;
                     }
                 }
             }
@@ -246,7 +247,9 @@ const Wrapper = ({arrayAllContainer, eventClick,
 
                 {divUltimoFilme && (
                     <div className='ContainerAnimateTwo'>
-                        <div className='ContainerTrailerTwo'>
+                        <div className='ContainerTrailerTwo' 
+                        onMouseMove={moveFilmeAuto}
+                        onMouseOver={moveFilmeAuto}>
                             
 
 
@@ -254,7 +257,9 @@ const Wrapper = ({arrayAllContainer, eventClick,
 
                         </div>
 
-                        <div className='TextAndDescriptionTwo'>
+                        <div className='TextAndDescriptionTwo' 
+                        onMouseMove={moveFilmeAuto}
+                        onMouseOver={moveFilmeAuto}>
 
                             <h3>{collection[9].title}</h3>
 
